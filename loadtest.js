@@ -40,27 +40,30 @@ export const options = {
     }
 }
 
-export default function() {
-    getYandex();
-}
+// export default function() {
+//     getYandex();
+//     getGoogle ();
+// }
 
 const BASE_URL_ya = 'https://ya.ru'
 const BASE_URL_google = 'http://google.com'
 
-const yaTagRps = new Trend('my_yaTagRps')
-const googleTagRps = new Trend('my_googleTagRps')
+// const myTrend = new Trend('my_trend');
+// const myTrendGoogle = new Trend('my_trend2')
 
 export function getYandex (){
     group('getYandex', () => {
-        http.get(`${BASE_URL_ya}/`)
+        http.get(`${BASE_URL_ya}/`, {tags:{my_rps: "yandex_RPS"}})
 
-        yaTagRps.add(getYandex.rps, {my_yaTagRps: "yaRPS"})
+        // myTrend.add(getYandex.rps)
     })
 }
 
 export function getGoogle (){
     group('getGoogle', () => {
-        http.get(`${BASE_URL_google}/`)
-        googleTagRps.add(getGoogle.rps, {my_googleTagRps: "googleRPS"})
-    })
+        http.get(`${BASE_URL_google}/`, {tags:{my_rps: "google_RPS"}})
+
+        // myTrendGoogle.add(getGoogle.rps)
+ 
+   })
 }
