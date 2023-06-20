@@ -1,0 +1,60 @@
+Flag --logformat has been deprecated, log-format
+
+          /\      |‾‾| /‾‾/   /‾‾/   
+     /\  /  \     |  |/  /   /  /    
+    /  \/    \    |     (   /   ‾‾\  
+   /          \   |  |\  \ |  (‾)  | 
+  / __________ \  |__| \__\ \_____/ .io
+
+  execution: local
+     script: webtours.js
+     output: -
+
+  scenarios: (100.00%) 1 scenario, 1 max VUs, 10m30s max duration (incl. graceful stop):
+           * default: 1 iterations for each of 1 VUs (maxDuration: 10m0s, gracefulStop: 30s)
+
+
+Init      [   0% ] 0/1 VUs initialized
+default   [   0% ]
+
+running (00m01.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m01.0s/10m0s  0/1 iters, 1 per VU
+
+running (00m02.0s), 0/1 VUs, 1 complete and 0 interrupted iterations
+default ✓ [ 100% ] 1 VUs  00m02.0s/10m0s  1/1 iters, 1 per VU
+
+     █ rootPage
+
+     █ Login
+
+     █ Flights
+
+     █ findFlight
+
+     █ selectFlight
+
+     █ Payment
+
+     █ inHome
+
+     data_received..................: 51 kB 26 kB/s
+     data_sent......................: 24 kB 12 kB/s
+     group_duration.................: avg=282.57ms min=134.68ms med=315.25ms max=448.35ms p(90)=413.47ms p(95)=430.91ms
+     http_req_blocked...............: avg=271.35µs min=0s       med=0s       max=9.76ms   p(90)=0s       p(95)=0s      
+     http_req_connecting............: avg=271.35µs min=0s       med=0s       max=9.76ms   p(90)=0s       p(95)=0s      
+     http_req_duration..............: avg=52.26ms  min=10.04ms  med=45.44ms  max=138.52ms p(90)=111.05ms p(95)=114.85ms
+       { expected_response:true }...: avg=52.26ms  min=10.04ms  med=45.44ms  max=138.52ms p(90)=111.05ms p(95)=114.85ms
+     http_req_failed................: 0.00% ✓ 0         ✗ 36 
+     http_req_receiving.............: avg=5.76ms   min=1.53ms   med=3.86ms   max=15.7ms   p(90)=9.46ms   p(95)=12.45ms 
+     http_req_sending...............: avg=42.53µs  min=0s       med=0s       max=517.4µs  p(90)=0s       p(95)=506.67µs
+     http_req_tls_handshaking.......: avg=0s       min=0s       med=0s       max=0s       p(90)=0s       p(95)=0s      
+     http_req_waiting...............: avg=46.46ms  min=8.02ms   med=41.5ms   max=122.81ms p(90)=102.48ms p(95)=106.51ms
+     http_reqs......................: 36    18.190196/s
+     iteration_duration.............: avg=1.97s    min=1.97s    med=1.97s    max=1.97s    p(90)=1.97s    p(95)=1.97s   
+     iterations.....................: 1     0.505283/s
+     vus............................: 1     min=0       max=1
+     vus_max........................: 1     min=0       max=1
+
+
+running (00m02.0s), 0/1 VUs, 1 complete and 0 interrupted iterations
+default ✓ [ 100% ] 1 VUs  00m02.0s/10m0s  1/1 iters, 1 per VU
